@@ -17,7 +17,6 @@ interface ISelectFieldData {
 }
 
 interface ISelectFieldProps {
-  value: string;
   label?: string;
   placeholder?: string;
   defaultOpen?: boolean;
@@ -36,7 +35,6 @@ interface ISelectFieldProps {
 
 const SelectField = ({
   data,
-  value,
   label,
   onValueChange,
   classNames = {},
@@ -55,7 +53,6 @@ const SelectField = ({
 
   return (
     <Select
-      value={value}
       defaultOpen={defaultOpen}
       defaultValue={defaultValue}
       onValueChange={onValueChange}>
