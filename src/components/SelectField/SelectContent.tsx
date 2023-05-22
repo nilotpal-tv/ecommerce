@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import { cn } from '@/lib/utils';
-import * as SelectPrimitive from '@radix-ui/react-select';
-import * as React from 'react';
+import { cn } from '@/lib/utils'
+import * as SelectPrimitive from '@radix-ui/react-select'
+import * as React from 'react'
 
 const SelectContent = React.forwardRef<
-  React.ElementRef<typeof SelectPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
+React.ElementRef<typeof SelectPrimitive.Content>,
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
 >(({ className, children, position = 'popper', ...props }, ref) => (
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
@@ -28,8 +28,8 @@ const SelectContent = React.forwardRef<
       </SelectPrimitive.Viewport>
     </SelectPrimitive.Content>
   </SelectPrimitive.Portal>
-));
+))
 
-SelectContent.displayName = SelectPrimitive.Content.displayName;
+SelectContent.displayName = SelectPrimitive.Content.displayName
 
-export default SelectContent;
+export default SelectContent

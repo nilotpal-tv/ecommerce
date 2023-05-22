@@ -38,3 +38,5 @@ next-env.d.ts
 # envs
 .env
 !.env.example
+
+Dockerfile

@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import { cn } from '@/lib/utils';
-import * as SelectPrimitive from '@radix-ui/react-select';
-import { ChevronDown } from 'lucide-react';
-import * as React from 'react';
+import { cn } from '@/lib/utils'
+import * as SelectPrimitive from '@radix-ui/react-select'
+import { ChevronDown } from 'lucide-react'
+import * as React from 'react'
 
 const SelectTrigger = React.forwardRef<
-  React.ElementRef<typeof SelectPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
+React.ElementRef<typeof SelectPrimitive.Trigger>,
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
   <SelectPrimitive.Trigger
     ref={ref}
@@ -21,8 +21,8 @@ const SelectTrigger = React.forwardRef<
       <ChevronDown className="h-4 w-4 opacity-50" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
-));
+))
 
-SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
+SelectTrigger.displayName = SelectPrimitive.Trigger.displayName
 
-export default SelectTrigger;
+export default SelectTrigger

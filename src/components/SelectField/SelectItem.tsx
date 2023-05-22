@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import { cn } from '@/lib/utils';
-import * as SelectPrimitive from '@radix-ui/react-select';
-import { Check } from 'lucide-react';
-import * as React from 'react';
+import { cn } from '@/lib/utils'
+import * as SelectPrimitive from '@radix-ui/react-select'
+import { Check } from 'lucide-react'
+import * as React from 'react'
 
 const SelectItem = React.forwardRef<
-  React.ElementRef<typeof SelectPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
+React.ElementRef<typeof SelectPrimitive.Item>,
+React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
 >(({ className, children, ...props }, ref) => (
   <SelectPrimitive.Item
     ref={ref}
@@ -24,8 +24,8 @@ const SelectItem = React.forwardRef<
 
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
   </SelectPrimitive.Item>
-));
+))
 
-SelectItem.displayName = SelectPrimitive.Item.displayName;
+SelectItem.displayName = SelectPrimitive.Item.displayName
 
-export default SelectItem;
+export default SelectItem
