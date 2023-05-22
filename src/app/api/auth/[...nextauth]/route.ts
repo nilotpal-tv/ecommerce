@@ -1,16 +1,17 @@
-import prisma from '@/lib/prisma'
-import authService from '@/services/auth.service'
-import hashService from '@/services/hash.service'
-import { PrismaAdapter } from '@next-auth/prisma-adapter'
-import NextAuth, { type NextAuthOptions } from 'next-auth'
-import CredentialsProvider from 'next-auth/providers/credentials'
-import GoogleProvider from 'next-auth/providers/google'
-import z from 'zod'
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import NextAuth, { type NextAuthOptions } from 'next-auth';
+import CredentialsProvider from 'next-auth/providers/credentials';
+import GoogleProvider from 'next-auth/providers/google';
+import z from 'zod';
+
+import prisma from '@/lib/prisma';
+import authService from '@/services/auth.service';
+import hashService from '@/services/hash.service';
 
 export const loginValidationSchema = z.object({
   password: z.string(),
-  email: z.string().email()
-})
+  email: z.string().email(),
+});
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -18,50 +19,50 @@ export const authOptions: NextAuthOptions = {
     CredentialsProvider({
       credentials: {
         email: { type: 'text', label: 'Email' },
-        password: { type: 'password', label: 'Password' }
+        password: { type: 'password', label: 'Password' },
       },
-      async authorize (credentials, req) {
+      async authorize(credentials, req) {
         try {
           const parsedValues = await loginValidationSchema.parseAsync(
-            credentials
-          )
+            credentials,
+          );
 
-          const user = await authService.findUserByEmail(parsedValues.email)
-          if (!user) return null
+          const user = await authService.findUserByEmail(parsedValues.email);
+          if (!user) return null;
 
           const isValidPassword = await hashService.compare(
             parsedValues.password,
-            user.password
-          )
+            user.password,
+          );
 
-          if (!isValidPassword) return null
+          if (!isValidPassword) return null;
           return {
             name: user.name,
             id: user.id + '',
             email: user.email,
-            image: user.image
-          }
+            image: user.image,
+          };
         } catch (error) {
-          return null
+          return null;
         }
-      }
+      },
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      profile (profile, tokens) {
-        return { ...profile, tokenData: tokens }
-      }
-    })
+      profile(profile, tokens) {
+        return { ...profile, tokenData: tokens };
+      },
+    }),
   ],
   callbacks: {
-    session ({ user, session }) {
-      console.log({ user, session })
-      return { ...session, user: { ...session.user, ...user } }
-    }
+    session({ user, session }) {
+      console.log({ user, session });
+      return { ...session, user: { ...session.user, ...user } };
+    },
   },
-  pages: { error: '/signin', signIn: '/signin', signOut: '/signin' }
-}
+  pages: { error: '/signin', signIn: '/signin', signOut: '/signin' },
+};
 
-const handler = NextAuth(authOptions)
-export { handler as GET, handler as POST }
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
