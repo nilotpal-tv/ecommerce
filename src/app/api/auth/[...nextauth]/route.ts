@@ -2,16 +2,11 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import NextAuth, { type NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import GoogleProvider from 'next-auth/providers/google';
-import z from 'zod';
 
+import { loginValidationSchema } from '@/app/(auth)/signin/page';
 import prisma from '@/lib/prisma';
 import authService from '@/services/auth.service';
 import hashService from '@/services/hash.service';
-
-export const loginValidationSchema = z.object({
-  password: z.string(),
-  email: z.string().email(),
-});
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
