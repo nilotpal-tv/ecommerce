@@ -8,13 +8,13 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Pom Pom E-Commerce',
-  description: 'An E-Commerce Site'
-}
+  description: 'An E-Commerce Site',
+};
 
-export default function RootLayout ({
-  children
+export default function RootLayout({
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -27,5 +27,5 @@ export default function RootLayout ({
         </SessionProvider>
       </body>
     </html>
-  )
+  );
 }

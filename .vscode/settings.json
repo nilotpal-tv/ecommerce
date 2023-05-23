@@ -1,0 +1,10 @@
+{
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "editor.accessibilitySupport": "on",
+  "editor.guides.bracketPairs": "active",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[prisma]": { "editor.defaultFormatter": "Prisma.prisma" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }
+}
