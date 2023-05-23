@@ -1,30 +1,30 @@
-import { compare as bcryptCompare, hash as bcryptHash } from 'bcrypt'
-import httpErrors from 'http-errors'
+import { compare as bcryptCompare, hash as bcryptHash } from 'bcrypt';
+import httpErrors from 'http-errors';
 
 class HashService {
-  async hash (data: string | Buffer, round = 13): Promise<string> {
+  async hash(data: string | Buffer, round = 13): Promise<string> {
     try {
-      const saltRound = round >= 13 ? round : 13
-      return await bcryptHash(data, saltRound)
+      const saltRound = round >= 13 ? round : 13;
+      return await bcryptHash(data, saltRound);
     } catch (error) {
       throw new httpErrors.InternalServerError(
-        'Something went wrong. Please try again.'
-      )
+        'Something went wrong. Please try again.',
+      );
     }
   }
 
-  async compare (
+  async compare(
     data: string | Buffer,
-    encryptedData: string
+    encryptedData: string,
   ): Promise<boolean> {
     try {
-      return await bcryptCompare(data, encryptedData)
+      return await bcryptCompare(data, encryptedData);
     } catch (error) {
       throw new httpErrors.InternalServerError(
-        'Something went wrong. Please try again.'
-      )
+        'Something went wrong. Please try again.',
+      );
     }
   }
 }
 
-export default new HashService()
+export default new HashService();
