@@ -1,20 +1,19 @@
 'use client';
 
 import Link from 'next/link';
-import { Checkbox } from './checkbox';
-import CustomButton from './customButton';
-import GoogleButton from './googleButton';
-import { Input } from './input';
-import { Label } from './label';
+import Label from '@/components/ui/Label';
+import Input from '@/components/ui/Input';
+import Checkbox from '@/components/ui/Checkbox';
 
 function LoginForm() {
   const handleSubmit = () => {};
   const handleGoogleSignin = () => {};
+
   return (
     <form className="flex-col justify-start items-center flex-1">
       <Input
-        placeholder="Username or Email*"
-        className="input input-bordered w-full p-4 rounded-md mb-6"
+        placeholder="Email*"
+        className="input input-bordered w-full p-4  rounded-md mb-6"
       />
       <Input
         placeholder="Your password*"
@@ -45,12 +44,12 @@ function LoginForm() {
         </Link>
       </div>
       <div className="flex flex-row justify-start w-full mb-3">
-        <CustomButton title={'Log in'} onClick={handleSubmit} />
+        {/* <CustomButton title={'Log in'} onClick={handleSubmit} /> */}
       </div>
       <div className="flex flex-row justify-center items-center mb-3">
         <div className="text-[#b6b6b6] text-base font-semibold">or</div>
       </div>
-      <GoogleButton onClick={handleGoogleSignin} />
+      {/* <GoogleButton onClick={handleGoogleSignin} /> */}
     </form>
   );
 }

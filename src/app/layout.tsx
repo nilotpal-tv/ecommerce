@@ -1,8 +1,8 @@
 import { type Metadata } from 'next';
 import './globals.css';
 
-import SessionProvider from '@/components/SessionProvider';
 import { outfitGeneric } from '@/lib/fonts';
+import SessionProvider from '@/components/SessionProvider';
 
 export const metadata: Metadata = {
   title: 'Pom Pom E-Commerce',
