@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import React from "react";
-import googleLogo from "../../public/assets/Google Logo.svg";
+import Image from 'next/image';
+import React from 'react';
+import googleLogo from '../../public/assets/Google Logo.svg';
 
 function GoogleButton({ onClick }: { onClick: () => void }) {
   return (
@@ -13,7 +13,7 @@ function GoogleButton({ onClick }: { onClick: () => void }) {
       <div className="flex flex-row justify-center items-center my-3">
         <Image
           src={googleLogo}
-          alt={"google logo"}
+          alt={'google logo'}
           className="mr-3"
           height={28}
           width={28}
