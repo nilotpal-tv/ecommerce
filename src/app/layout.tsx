@@ -2,6 +2,7 @@ import { type Metadata } from 'next';
 import './globals.css';
 
 import { outfitGeneric } from '@/lib/fonts';
+import Navbar from '@/components/Navbar';
 import SessionProvider from '@/components/SessionProvider';
 
 export const metadata: Metadata = {
@@ -17,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfitGeneric.className}>
-        <SessionProvider>{children}</SessionProvider>
+        <SessionProvider>
+          <Navbar />
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );

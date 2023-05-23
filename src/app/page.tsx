@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import SelectField from '@/components/ui/SelectField';
 import './globals.css';
 
 export default async function Home() {
