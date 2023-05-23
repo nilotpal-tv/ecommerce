@@ -1,10 +1,8 @@
-import Navbar from '@/components/Navbar';
-import SessionProvider from '@/components/SessionProvider';
 import { outfitGeneric } from '@/lib/fonts';
 import { type Metadata } from 'next';
 import './globals.css';
-
-
+import Navbar from '@/components/Navbar';
+import SessionProvider from '@/components/SessionProvider';
 
 export const metadata: Metadata = {
   title: 'Pom Pom E-Commerce',
@@ -18,11 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-   
-    
       <body className={outfitGeneric.className}>
         <SessionProvider>
-        <Navbar />
+          <Navbar />
           {children}
         </SessionProvider>
       </body>
