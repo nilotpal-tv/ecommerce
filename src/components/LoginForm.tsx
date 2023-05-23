@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { Checkbox } from "./checkbox";
-import CustomButton from "./customButton";
-import GoogleButton from "./googleButton";
-import { Input } from "./input";
-import { Label } from "./label";
+import Link from 'next/link';
+import { Checkbox } from './checkbox';
+import CustomButton from './customButton';
+import GoogleButton from './googleButton';
+import { Input } from './input';
+import { Label } from './label';
 
 function LoginForm() {
   const handleSubmit = () => {};
@@ -45,7 +45,7 @@ function LoginForm() {
         </Link>
       </div>
       <div className="flex flex-row justify-start w-full mb-3">
-        <CustomButton title={"Log in"} onClick={handleSubmit} />
+        <CustomButton title={'Log in'} onClick={handleSubmit} />
       </div>
       <div className="flex flex-row justify-center items-center mb-3">
         <div className="text-[#b6b6b6] text-base font-semibold">or</div>
