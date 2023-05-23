@@ -1,7 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  content: ['src/components/**/*.{ts,tsx}', 'src/app/**/*.{ts,tsx}'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/pages/**/*.{ts,tsx}',
+    './src/components/**/*.{ts,tsx}',
+    './src/app/**/*.{ts,tsx}',
+  ],
   theme: {
     container: {
       center: true,
@@ -14,55 +21,55 @@ module.exports = {
       fontSize: {
         'display-1': [
           '96px',
-          { fontWeight: '700', letterSpacing: '0px', lineHeight: '128px' },
+          {fontWeight: '700', letterSpacing: '0px', lineHeight: '128px'},
         ],
         'display-2': [
           '72px',
-          { letterSpacing: '0px', fontWeight: '700', lineHeight: '96px' },
+          {letterSpacing: '0px', fontWeight: '700', lineHeight: '96px'},
         ],
         'heading-1': [
           '48px',
-          { letterSpacing: '0px', fontWeight: '700', lineHeight: '64px' },
+          {letterSpacing: '0px', fontWeight: '700', lineHeight: '64px'},
         ],
         'heading-2': [
           '40px',
-          { letterSpacing: '0px', fontWeight: '700', lineHeight: '48px' },
+          {letterSpacing: '0px', fontWeight: '700', lineHeight: '48px'},
         ],
         'heading-3': [
           '32px',
-          { letterSpacing: '0px', fontWeight: '700', lineHeight: '40px' },
+          {letterSpacing: '0px', fontWeight: '700', lineHeight: '40px'},
         ],
         'heading-4': [
           '24px',
-          { letterSpacing: '0px', fontWeight: '700', lineHeight: '32px' },
+          {letterSpacing: '0px', fontWeight: '700', lineHeight: '32px'},
         ],
         'heading-5': [
           '20px',
-          { letterSpacing: '0px', fontWeight: '700', lineHeight: '24px' },
+          {letterSpacing: '0px', fontWeight: '700', lineHeight: '24px'},
         ],
         'heading-6': [
           '16px',
-          { letterSpacing: '0px', fontWeight: '700', lineHeight: '20px' },
+          {letterSpacing: '0px', fontWeight: '700', lineHeight: '20px'},
         ],
         'heading-sm': [
           '14px',
-          { letterSpacing: '0px', fontWeight: '700', lineHeight: '16px' },
+          {letterSpacing: '0px', fontWeight: '700', lineHeight: '16px'},
         ],
         lg: [
           '18px',
-          { letterSpacing: '0px', fontWeight: '500', lineHeight: '26px' },
+          {letterSpacing: '0px', fontWeight: '500', lineHeight: '26px'},
         ],
         md: [
           '16px',
-          { letterSpacing: '0px', fontWeight: '500', lineHeight: '24px' },
+          {letterSpacing: '0px', fontWeight: '500', lineHeight: '24px'},
         ],
         sm: [
           '14px',
-          { letterSpacing: '0px', fontWeight: '500', lineHeight: '21px' },
+          {letterSpacing: '0px', fontWeight: '500', lineHeight: '21px'},
         ],
         xs: [
           '12px',
-          { letterSpacing: '0px', fontWeight: '500', lineHeight: '18px' },
+          {letterSpacing: '0px', fontWeight: '500', lineHeight: '18px'},
         ],
       },
       colors: {
@@ -107,12 +114,12 @@ module.exports = {
       },
       keyframes: {
         'accordion-down': {
-          from: { height: 0 },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          from: {height: 0},
+          to: {height: 'var(--radix-accordion-content-height)'},
         },
         'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: 0 },
+          from: {height: 'var(--radix-accordion-content-height)'},
+          to: {height: 0},
         },
       },
       animation: {

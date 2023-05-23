@@ -1,6 +1,6 @@
-import LoginForm from "@/components/LoginForm";
-import Image from "next/image";
-import loginImg from "../../../../public/assets/login_img.svg";
+import LoginForm from '@/components/LoginForm';
+import Image from 'next/image';
+import loginImg from '../../../../public/assets/login_img.svg';
 
 function page() {
   return (
@@ -8,7 +8,7 @@ function page() {
       <div className="h-[50%] md:min-w-50 flex flex-col justify-evenly items-center md:flex-row mx-5 sm:mx-0 md:mx-5">
         <Image
           src={loginImg}
-          alt={"login image"}
+          alt={'login image'}
           className="flex flex-1 md:mr-14 mb-10"
         />
         <div className="flex flex-1 flex-col">
