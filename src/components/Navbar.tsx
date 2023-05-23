@@ -1,15 +1,15 @@
-import Image from "next/image";
-import SearchDropdown from "./SearchDropdown";
-import Input from "./SearchInput";
-import Link from "next/link";
-import { Badge } from "../../components/ui/badge";
-import Navbar2 from "./Navbar2";
+import Image from 'next/image';
+import SearchDropdown from './SearchDropdown';
+import Input from './SearchInput';
+import Link from 'next/link';
+import { Badge } from '../../components/ui/badge';
+import Navbar2 from './Navbar2';
 
 const Profile = () => {
   return (
     <div className="flex px-[10px]">
       <Image
-        src={"../assets/icons/user.svg"}
+        src={'../assets/icons/user.svg'}
         alt="user"
         height={24}
         width={24}
@@ -23,7 +23,7 @@ const Compare = () => {
   return (
     <div className="flex px-[10px]">
       <Image
-        src={"../assets/icons/compare.svg"}
+        src={'../assets/icons/compare.svg'}
         alt="user"
         height={24}
         width={24}
@@ -37,7 +37,7 @@ const Wishlist = () => {
   return (
     <div className="flex px-[10px] relative">
       <Image
-        src={"../assets/icons/heart.svg"}
+        src={'../assets/icons/heart.svg'}
         alt="user"
         height={24}
         width={24}
@@ -54,7 +54,7 @@ const Cart = () => {
   return (
     <div className="flex px-[10px] relative">
       <Image
-        src={"../assets/icons/cart.svg"}
+        src={'../assets/icons/cart.svg'}
         alt="user"
         height={24}
         width={24}
@@ -73,7 +73,7 @@ const Navbar = () => {
       <div className="flex justify-evenly items-center px-[5%] py-8 border-b border-[#c9c9c9]">
         <Link href="/">
           <Image
-            src={"../assets/icons/Logo.svg"}
+            src={'../assets/icons/Logo.svg'}
             width={215}
             height={66}
             alt="logo"
@@ -82,7 +82,7 @@ const Navbar = () => {
 
         <div
           className="flex items-center bg-white px-4 py-2 rounded-[5px] w-[50%]"
-          style={{ border: "1px solid var(--color-primary)" }}
+          style={{ border: '1px solid var(--color-primary)' }}
         >
           <SearchDropdown />
           <Input />

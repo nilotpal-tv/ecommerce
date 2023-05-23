@@ -1,5 +1,5 @@
-import React from "react";
-import CategoryBlock from "./CategoryBlock";
+import React from 'react';
+import CategoryBlock from './CategoryBlock';
 
 const Navbar2 = () => {
   return <CategoryBlock />;
