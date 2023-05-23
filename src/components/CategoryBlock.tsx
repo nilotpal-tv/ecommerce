@@ -1,23 +1,23 @@
-"use client";
+'use client';
 
-import { Check, ChevronDown } from "lucide-react";
-import Image from "next/image";
-import { Button } from "../../components/ui/button";
+import { Check, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '../../components/ui/button';
 import {
   Command,
   CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-} from "../../components/ui/command";
+} from '../../components/ui/command';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "../../components/ui/popover";
+} from '../../components/ui/popover';
 
-import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
 
 const CategoryBlock = () => {
   const [open, setOpen] = useState(false);
@@ -29,54 +29,54 @@ const CategoryBlock = () => {
     //   label: "Milk and Diaries",
     // },
     {
-      image: "../assets/icons/milk&dairies.svg",
-      value: "Milks and Dairies",
-      label: "Milks and Dairies",
+      image: '../assets/icons/milk&dairies.svg',
+      value: 'Milks and Dairies',
+      label: 'Milks and Dairies',
     },
     {
-      image: "../assets/icons/wines&drinks.svg",
-      value: "Wines & Drinks",
-      label: "Wines & Drinks",
+      image: '../assets/icons/wines&drinks.svg',
+      value: 'Wines & Drinks',
+      label: 'Wines & Drinks',
     },
     {
-      image: "../assets/icons/clothing&beauty.svg",
-      value: "Clothing & beauty",
-      label: "Clothing & beauty",
+      image: '../assets/icons/clothing&beauty.svg',
+      value: 'Clothing & beauty',
+      label: 'Clothing & beauty',
     },
     {
-      image: "../assets/icons/seafood.svg",
-      value: "Fresh Seafood",
-      label: "Fresh Seafood",
+      image: '../assets/icons/seafood.svg',
+      value: 'Fresh Seafood',
+      label: 'Fresh Seafood',
     },
     {
-      image: "../assets/icons/petfood.svg",
-      value: "Pet Foods & Toy",
-      label: "Pet Foods & Toy",
+      image: '../assets/icons/petfood.svg',
+      value: 'Pet Foods & Toy',
+      label: 'Pet Foods & Toy',
     },
     {
-      image: "../assets/icons/fastfood.svg",
-      value: "Fast food",
-      label: "Fast food",
+      image: '../assets/icons/fastfood.svg',
+      value: 'Fast food',
+      label: 'Fast food',
     },
     {
-      image: "../assets/icons/baking.svg",
-      value: "Baking material",
-      label: "Baking material",
+      image: '../assets/icons/baking.svg',
+      value: 'Baking material',
+      label: 'Baking material',
     },
     {
-      image: "../assets/icons/vegetables.svg",
-      value: "Vegetables",
-      label: "Vegetables",
+      image: '../assets/icons/vegetables.svg',
+      value: 'Vegetables',
+      label: 'Vegetables',
     },
     {
-      image: "../assets/icons/fruits.svg",
-      value: "Fresh Fruits",
-      label: "Fresh Fruits",
+      image: '../assets/icons/fruits.svg',
+      value: 'Fresh Fruits',
+      label: 'Fresh Fruits',
     },
     {
-      image: "../assets/icons/bread&juice.svg",
-      value: "Bread and Juice",
-      label: "Bread and Juice",
+      image: '../assets/icons/bread&juice.svg',
+      value: 'Bread and Juice',
+      label: 'Bread and Juice',
     },
   ];
 
