@@ -1,17 +1,13 @@
 'use client';
 
+import PopOverContent from '@/components/ui/PopOverContent';
 import { useState } from 'react';
-import PopOverContent from './PopOverContent';
 
 const SearchDropdown = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState('');
 
   const items = [
-    // {
-    //   value: "milk and dairies",
-    //   label: "Milk and Diaries",
-    // },
     {
       value: 'wine and alcohol',
       label: 'Wine and Alcohol',

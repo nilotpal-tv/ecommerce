@@ -1,7 +1,7 @@
 import { type PrismaClient, type User } from '@prisma/client';
 import httpErrors from 'http-errors';
 
-import { type UserRegistrationDto } from '@/app/api/auth/signup/route';
+import { UserRegistrationDto } from '@/app/(auth)/signup/page';
 import prisma from '@/lib/prisma';
 import hashService from './hash.service';
 
@@ -43,4 +43,6 @@ class AuthService {
   }
 }
 
-export default new AuthService(prisma);
+const authService = new AuthService(prisma);
+
+export default authService;

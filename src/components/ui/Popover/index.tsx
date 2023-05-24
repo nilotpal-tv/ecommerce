@@ -1,12 +1,10 @@
 'use client';
 
-import * as React from 'react';
-import * as PopoverPrimitive from '@radix-ui/react-popover';
-
 import { cn } from '@/lib/utils';
+import * as PopoverPrimitive from '@radix-ui/react-popover';
+import * as React from 'react';
 
 const Popover = PopoverPrimitive.Root;
-
 const PopoverTrigger = PopoverPrimitive.Trigger;
 
 const PopoverContent = React.forwardRef<
@@ -26,6 +24,7 @@ const PopoverContent = React.forwardRef<
     />
   </PopoverPrimitive.Portal>
 ));
+
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 
 export { Popover, PopoverTrigger, PopoverContent };

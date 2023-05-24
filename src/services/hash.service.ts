@@ -27,4 +27,6 @@ class HashService {
   }
 }
 
-export default new HashService();
+const hashService = new HashService();
+
+export default hashService;

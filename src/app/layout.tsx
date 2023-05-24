@@ -1,8 +1,9 @@
-import { outfitGeneric } from '@/lib/fonts';
 import { type Metadata } from 'next';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import SessionProvider from '@/components/SessionProvider';
+
+import { outfitGeneric } from '@/lib/fonts';
+import Navbar from '@/components/Layout/Navbar';
+import SessionProvider from '@/components/Layout/SessionProvider';
 
 export const metadata: Metadata = {
   title: 'Pom Pom E-Commerce',

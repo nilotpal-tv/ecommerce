@@ -1,19 +1,16 @@
 import { cn } from '@/lib/utils';
-import {
-  Command,
-  CommandInput,
-  CommandEmpty,
-  CommandGroup,
-  CommandItem,
-} from '../../../components/ui/command';
+
 import { Check, ChevronsUpDown } from 'lucide-react';
 import React from 'react';
+import { Popover, PopoverContent, PopoverTrigger } from '../Popover';
+import { Button } from '../Button';
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '../../../components/ui/popover';
-import { Button } from '../../../components/ui/button';
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+} from '../Command';
 
 export interface IPopOverContent {
   label: string;

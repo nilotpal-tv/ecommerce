@@ -1,80 +1,69 @@
 'use client';
 
-import { Check, ChevronDown } from 'lucide-react';
-import Image from 'next/image';
-import { Button } from '../../components/ui/button';
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-} from '../../components/ui/command';
+import { Button } from '@/components/ui/Button';
+import { Command, CommandGroup, CommandItem } from '@/components/ui/Command';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '../../components/ui/popover';
+} from '@/components/ui/Popover';
+import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 import { useState } from 'react';
-import { cn } from '@/lib/utils';
 
 const CategoryBlock = () => {
   const [open, setOpen] = useState(false);
   //   const [value, setValue] = useState("");
 
   const items = [
-    // {
-    //   value: "milk and dairies",
-    //   label: "Milk and Diaries",
-    // },
     {
-      image: '../assets/icons/milk&dairies.svg',
+      image: '/assets/icons/milk&dairies.svg',
       value: 'Milks and Dairies',
       label: 'Milks and Dairies',
     },
     {
-      image: '../assets/icons/wines&drinks.svg',
+      image: '/assets/icons/wines&drinks.svg',
       value: 'Wines & Drinks',
       label: 'Wines & Drinks',
     },
     {
-      image: '../assets/icons/clothing&beauty.svg',
+      image: '/assets/icons/clothing&beauty.svg',
       value: 'Clothing & beauty',
       label: 'Clothing & beauty',
     },
     {
-      image: '../assets/icons/seafood.svg',
+      image: '/assets/icons/seafood.svg',
       value: 'Fresh Seafood',
       label: 'Fresh Seafood',
     },
     {
-      image: '../assets/icons/petfood.svg',
+      image: '/assets/icons/petfood.svg',
       value: 'Pet Foods & Toy',
       label: 'Pet Foods & Toy',
     },
     {
-      image: '../assets/icons/fastfood.svg',
+      image: '/assets/icons/fastfood.svg',
       value: 'Fast food',
       label: 'Fast food',
     },
     {
-      image: '../assets/icons/baking.svg',
+      image: '/assets/icons/baking.svg',
       value: 'Baking material',
       label: 'Baking material',
     },
     {
-      image: '../assets/icons/vegetables.svg',
+      image: '/assets/icons/vegetables.svg',
       value: 'Vegetables',
       label: 'Vegetables',
     },
     {
-      image: '../assets/icons/fruits.svg',
+      image: '/assets/icons/fruits.svg',
       value: 'Fresh Fruits',
       label: 'Fresh Fruits',
     },
     {
-      image: '../assets/icons/bread&juice.svg',
+      image: '/assets/icons/bread&juice.svg',
       value: 'Bread and Juice',
       label: 'Bread and Juice',
     },
