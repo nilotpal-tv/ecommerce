@@ -6,6 +6,9 @@ import CustomButton from './customButton';
 import GoogleButton from './googleButton';
 import { Input } from './input';
 import { Label } from './label';
+import { Button } from './button';
+import Image from 'next/image';
+import googleLogo from '../../public/assets/Google Logo.svg';
 
 function LoginForm() {
   const handleSubmit = () => {};
@@ -45,12 +48,31 @@ function LoginForm() {
         </Link>
       </div>
       <div className="flex flex-row justify-start w-full mb-3">
-        <CustomButton title={'Log in'} onClick={handleSubmit} />
+        {/* <CustomButton title={'Log in'} onClick={handleSubmit} /> */}
+        <Button className="h-11 bg-[#253D4E] w-full rounded-[10px]">
+          <h6 className="my-3 mx-10 text-[#ffff] font-bold">Login</h6>
+        </Button>
       </div>
       <div className="flex flex-row justify-center items-center mb-3">
         <div className="text-[#b6b6b6] text-base font-semibold">or</div>
       </div>
-      <GoogleButton onClick={handleGoogleSignin} />
+      <Button
+        className="h-11 bg-white flex w-full justify-center items-center border-2 rounded-[10px] hover:bg-[#ededed]"
+        onClick={handleGoogleSignin}
+      >
+        <div className="flex flex-row justify-center items-center my-3">
+          <Image
+            src={googleLogo}
+            alt={'google logo'}
+            className="mr-3"
+            height={28}
+            width={28}
+          />
+          <h3 className="text-[#7E7E7E] font-bold text-xl">
+            Continue with Google
+          </h3>
+        </div>
+      </Button>
     </form>
   );
 }

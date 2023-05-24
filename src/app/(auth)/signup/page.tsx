@@ -1,5 +1,6 @@
 import React from 'react';
 import { z } from 'zod';
+import SignupForm from './components/signupForm';
 
 export const registrationValidationSchema = z.object({
   lastName: z.string(),
@@ -18,7 +19,14 @@ export const registrationValidationSchema = z.object({
 export type UserRegistrationDto = z.infer<typeof registrationValidationSchema>;
 
 const SignUpPage = () => {
-  return <div>page</div>;
+  return (
+    <div className="min-h-screen flex justify-center items-center min-w-full">
+      <div className="h-3/5 md:w-[60%] flex flex-col justify-evenly items-center md:flex-row mx-5 sm:mx-0 md:mx-5">
+        <SignupForm />
+        <div className="flex flex-1">social</div>
+      </div>
+    </div>
+  );
 };
 
 export default SignUpPage;
