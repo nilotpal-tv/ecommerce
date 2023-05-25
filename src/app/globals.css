@@ -3,7 +3,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  color: var(--text-color-primary);
+}
+
+.bg_primary {
+  background: var(--color-primary);
+}
+
+.bg_secondary {
+  background: var(--color-secondary);
+}
+
+.bg_yellow {
+  background: var(--color-yellow);
+}
+
+.bg_grey {
+  background: var(--color-grey-light);
+}
+
+.text_primary {
+  color: var(--color-primary);
+}
+
+.text_secondary {
+  color: var(--color-secondary);
+}
+
+.text_yellow {
+  color: (--color-yellow);
+}
+
 @layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    --text-color-primary: #253d4e;
+    --background-main: #ffffff;
+    --color-primary: #bd1e51;
+    --color-secondary: #490b3d;
+    --color-yellow: #f1b814;
+    --color-grey: #b6b6b6;
+    --color-grey-light: #f2f3f4;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
@@ -68,15 +120,5 @@
     --ring: 216 34% 17%;
 
     --radius: 0.5rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
