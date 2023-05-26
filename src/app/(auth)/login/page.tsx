@@ -5,12 +5,10 @@ import loginImg from '../../../../public/assets/login_img.svg';
 
 function page() {
   return (
-    <div className="min-h-screen flex justify-center items-center min-w-full">
-      <div className="h-[50%] md:min-w-50 flex flex-col justify-evenly items-center md:flex-row mx-5 sm:mx-0 md:mx-5">
+    <div className="my-16 flex justify-center items-center min-w-full">
+      <div className="h-[50%] md:min-w-50 flex flex-col justify-evenly items-center lg:flex-row mx-5 lg:mx-0">
         <Image
           priority
-          width={300}
-          height={300}
           src={loginImg}
           className="flex flex-1 md:mr-14 mb-10"
           alt="Woman sitting on chair and using laptop"
@@ -19,7 +17,7 @@ function page() {
           <h1 className="text-[#253D4E] font-bold text-4xl mb-2">Login</h1>
           <p className="mb-9 font-normal text-base">
             Do not have an account?
-            <Link href="/signup" className="text-[#3BB77E]">
+            <Link href="/signup" className="text-[var(--color-primary)]">
               {' '}
               create here
             </Link>
